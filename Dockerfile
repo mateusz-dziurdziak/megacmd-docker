@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.created=$BUILD_DATE \
   org.opencontainers.image.documentation="https://github.com/mateusz-dziurdziak/megacmd-docker/blob/main/README.md" \
   org.opencontainers.image.source="https://github.com/mateusz-dziurdziak/megacmd-docker.git" \
   org.opencontainers.image.revision=$VCS_REF \
-  org.opencontainers.image.licenses="Apache License 2.0" \
+  org.opencontainers.image.licenses="Apache-2.0" \
   org.opencontainers.image.title="Dockerized MEGAcmd" \
   org.opencontainers.image.description="MEGAcmd build from scratch running inside container"
 
