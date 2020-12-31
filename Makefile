@@ -9,7 +9,10 @@ build:
 		-t $(NAME):`date -u +"%Y%m%dT%H%M%SZ"` \
 		.
 
-publish: publish-latest
+publish: publish-latest publish-newest-tag
 
 publish-latest:
-	@docker push $(NAME):latest
+	docker push $(NAME):latest
+
+publish-newest-tag:
+	tag = docker images | grep $(NAME) | grep -vE "<none>|latest" | head -n 1 | awk '{print $$1":"$$2}' | xargs --no-run-if-empty docker push
